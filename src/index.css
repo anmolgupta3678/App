@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 3.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out 0.5s both;
+}
