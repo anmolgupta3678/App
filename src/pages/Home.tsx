@@ -30,7 +30,11 @@ const Home: React.FC = () => {
             <div className="w-48 h-48 mx-auto relative">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full animate-pulse"></div>
               <img
+<<<<<<< HEAD
                 src="/images.jpg"
+=======
+                src="/public/WhatsApp Image 2025-05-01 at 19.18.38_5ad8a074.jpg"
+>>>>>>> f91b5408ba2bf54bc299cb42ccc00a05a597a445
                 alt="Anmol Gupta"
                 className="w-44 h-44 rounded-full object-cover absolute top-2 left-2 border-4 border-white shadow-2xl"
               />
