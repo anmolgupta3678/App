@@ -30,9 +30,9 @@ const Contact: React.FC = () => {
     
     try {
       // EmailJS configuration
-      const serviceId = 'sservice_0njjgwv'; // You'll need to create this in EmailJS
-      const templateId = 'template_wtonoqd'; // You'll need to create this in EmailJS
-      const publicKey = 'rbwvSiTO4CDH_DZhA'; // You'll need to get this from EmailJS
+      const serviceId = 'service_0njjgwv';
+      const templateId = 'template_vxujyeo';
+      const publicKey = 'rbwvSiTO4CDH_DZhA';
       
       // Send email using EmailJS
       const result = await emailjs.sendForm(

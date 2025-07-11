@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -12,6 +12,38 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import CustomCursor from './components/CustomCursor';
 import './App.css';
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  const slideVariants = {
+    initial: { x: '100vw', opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } },
+    exit: { x: '-100vw', opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+  } as import('framer-motion').Variants;
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        variants={slideVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        style={{ minHeight: '100vh' }}
+      >
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -58,18 +90,7 @@ function App() {
       <Router>
         <CustomCursor />
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/certifications" element={<Certifications />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </AnimatePresence>
+        <AnimatedRoutes />
       </Router>
     </div>
   );
