@@ -25,6 +25,7 @@ const Projects: React.FC = () => {
         'Machine learning algorithms'
       ]
     },
+  
     {
       id: 2,
       title: 'Automated Remote DevOps Tasks',
@@ -33,7 +34,7 @@ const Projects: React.FC = () => {
       longDescription: 'Advanced DevOps automation platform that enables remote management of Linux systems and Docker containers through SSH. Features include automated deployment, real-time monitoring, system health tracking, and container orchestration. Built with Python, SSH automation, and Docker APIs.',
       technologies: ['Python', 'SSH', 'Docker', 'Linux', 'DevOps', 'Automation'],
       image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/anmolgupta3678/Devops_project.git',
+      github: 'https://github.com/anmolgupta3678/Docker-automation.git',
       demo: '#',
       features: [
         'SSH automation',

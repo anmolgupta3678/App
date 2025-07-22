@@ -20,6 +20,7 @@ function AnimatedRoutes() {
     animate: { x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } },
     exit: { x: '-100vw', opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
   } as import('framer-motion').Variants;
+  
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -29,6 +30,7 @@ function AnimatedRoutes() {
         animate="animate"
         exit="exit"
         style={{ minHeight: '100vh' }}
+        className="relative z-10"
       >
         <Routes location={location}>
           <Route path="/" element={<Home />} />
@@ -86,7 +88,7 @@ function App() {
   }
 
   return (
-    <div className={`${darkMode ? 'dark' : ''} min-h-screen transition-colors duration-300`}>
+    <div className={`${darkMode ? 'dark' : ''} min-h-screen transition-colors duration-300 bg-black`}>
       <Router>
         <CustomCursor />
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
