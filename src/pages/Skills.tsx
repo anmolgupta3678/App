@@ -12,19 +12,19 @@ const Skills: React.FC = () => {
     },
     'Tools': {
       icon: Settings,
-      skills: ['VS Code', 'MySQL', 'PyCharm', 'Dev C++', 'IntelliJ IDEA'],
+      skills: ['VS Code', 'MySQL', 'Jenkins', 'Docker', 'Ansible'],
       color: 'from-green-500 to-teal-600'
     },
     'Technologies': {
       icon: Cloud,
-      skills: ['Linux', 'GitHub', 'ReactJS', 'NodeJS', 'JWT', 'Flutter'],
+      skills: ['Linux', 'GitHub', 'MongoDB', 'Docker'],
       color: 'from-yellow-500 to-orange-600'
     }
   };
 
   const softSkills = [
     { name: 'DSA', icon: Puzzle, description: 'Data Structures & Algorithms' },
-    { name: 'C/C++/Python', icon: Code, description: 'Programming Languages' },
+    { name: 'Python', icon: Code, description: 'Programming Languages' },
     { name: 'DBMS', icon: Database, description: 'Database Management' },
     { name: 'Communication', icon: MessageCircle, description: 'Effective Communication' },
     { name: 'Problem Solving', icon: Lightbulb, description: 'Analytical Thinking' },
@@ -149,11 +149,11 @@ const Skills: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 { skill: 'Python', level: 90 },
-                { skill: 'ReactJS', level: 85 },
+                { skill: 'C', level: 60 },
                 { skill: 'Linux', level: 80 },
-                { skill: 'NodeJS', level: 75 },
+                { skill: 'java', level: 55},
                 { skill: 'MySQL', level: 85 },
-                { skill: 'Flutter', level: 70 },
+                { skill: 'Docker', level: 70 },
               ].map((item, index) => (
                 <motion.div
                   key={item.skill}
