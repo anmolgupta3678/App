@@ -7,12 +7,12 @@ const Skills: React.FC = () => {
   const technicalSkills = {
     'Languages': {
       icon: Code,
-      skills: ['Python', 'Java', 'C', 'C++', 'MySQL'],
+      skills: ['Python', 'Java', 'C', 'MySQL'],
       color: 'from-blue-500 to-purple-600'
     },
     'Tools': {
       icon: Settings,
-      skills: ['VS Code', 'MySQL', 'Jenkins', 'Docker', 'Ansible'],
+      skills: ['VS Code',  'Jenkins', 'Docker', 'Ansible'],
       color: 'from-green-500 to-teal-600'
     },
     'Technologies': {
