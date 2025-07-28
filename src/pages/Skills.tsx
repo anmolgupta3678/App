@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
   };
 
   const softSkills = [
-    { name: 'DSA', icon: Puzzle, description: 'Data Structures & Algorithms' },
+    
     { name: 'Python', icon: Code, description: 'Programming Languages' },
     { name: 'DBMS', icon: Database, description: 'Database Management' },
     { name: 'Communication', icon: MessageCircle, description: 'Effective Communication' },
